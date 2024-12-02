@@ -1,0 +1,32 @@
+---
+
+import nopal from "../../assets/nopal.png";
+import ServicesLayout from "../../layouts/ServicesLayout.astro";
+
+const { title, description } = Astro.props;
+---
+
+<ServicesLayout
+    title="Corporate Services: Legal Solutions for Your Business"
+    description="Comprehensive legal support for businesses, including contract drafting, corporate compliance, and tax advisory. Tailored solutions to help your company thrive in Mexico."
+    img={nopal}
+    alt="Bandera de Mexico"
+>
+    <h2>Corporation Legal Services</h2>
+    
+    <p>
+        PVR Legal’s commitment to your business extends beyond formation. Our comprehensive legal services for corporations in Puerto Vallarta and surrounding areas cover contract drafting and review, legal consultations, and more. Our team ensures your business is not only protected but also primed for growth. Our expertise in handling corporate legal matters, combined with our deep understanding of the Puerto Vallarta business ecosystem, positions PVR Legal as the leading firm for corporate law services.
+    </p>
+    <ul class="list-disc list-inside">
+        <li>Contract Law</li>
+        <li>Real State Law</li>
+        <li>Trust</li>
+        <li>Constitution of Companies</li>
+        <li>Ordinary and Extraordinary Assemblies</li>
+        <li>Condominium Regimen</li>
+        <li>Power of Attorney</li>
+        <li>Living Will</li>
+        <li>Subdivision</li>
+    </ul>
+
+</ServicesLayout>

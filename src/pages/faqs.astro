@@ -1,0 +1,273 @@
+---
+import InnerPagesHero from "../components/InnerPagesHero.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import crucero from "../assets/crucero.png"
+---
+
+<MainLayout title="About Us" description="about us">
+    <InnerPagesHero
+    title="Frequently Asked Questions (FAQs)"
+    description="Find clear answers to common questions about our legal, administrative, immigration, and financial services. Your concerns, resolved with ease."
+    img={crucero}
+    alt="Crucero"
+/>
+    <div class="container mx-auto my-20 flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2">
+            <img src="/faro.png" alt="Faro" width="w-full">
+        </div>
+        <div id="accordion-collapse" data-accordion="collapse" class="lg:w-1/2">
+                <h2 id="accordion-collapse-heading-1" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-alt rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-1"
+                    aria-expanded="true"
+                    aria-controls="accordion-collapse-body-1"
+                >
+                    <span class="text-lg roboto-condensed-regular">What are the benefits of Temporal or Permanent residency?</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-1"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-1"
+            >
+                <div
+                    class="p-5 border border-b-0 border-alt  "
+                >
+                    <p class="mb-2 text-gray-500 text-sm ">
+                        Acquiring a Mexican state driver’s license, enabling residents to purchase and register a car in Mexico. No limitations on the number of days allowed in Mexico, and no restrictions on time spent out of the country. Tax savings when selling property in Mexico. Ability to obtain a permit to work as a self-employed individual.
+
+
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-2" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-alt focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-2"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-2"
+                >
+                    <span class="text-lg roboto-condensed-regular text-left">Requirements for dual citizenship/Mexican citizenship for descendants of Mexicans by birth</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-2"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-2"
+            >
+                <div
+                    class="p-5 border border-b-0 border-alt dark:border-gray-700"
+                >
+                    <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
+                        Original birth certificate of the applicant, apostilled (not older than 1 year). Translation of the birth certificate and apostille by a registered authorized translator. Original birth certificates of both parents (not older than 1 year), including complete information on grandparents from both maternal and paternal sides. CURP (Unique Population Registry Code) of parent. Proof of address with a zip code in Vallarta. Mexican passports or Voter ID cards of both parents. Payment for registration and birth certificate.
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-3" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-alt focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-3"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-3"
+                >
+                    <span class="text-lg roboto-condensed-regular">Is it safe to buy property in Pre-construction?</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-3"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-4"
+            >
+                <div
+                    class="p-5 border border-b-0 border-alt dark:border-gray-700"
+                >
+                    <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
+                        Pre-construction purchases of condos or houses often pose high risks. Many buyers have lost large deposits due to projects not being completed on time or at all. Developers may request mortgages on the property, delaying the transfer of ownership. Without a title, selling the property or obtaining building permits becomes challenging.
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-4" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-alt focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-4"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-4"
+                >
+                    <span class="text-lg roboto-condensed-regular">Reasons for needing a Trust when buying in a restricted area</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-4"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-4"
+            >
+                <div
+                    class="p-5 border border-b-0 border-alt dark:border-gray-700"
+                >
+                    <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
+                        Properties in the Bahia zone are in a restricted zone and cannot be owned outright by non-citizens. A Trust with a bank as the title holder is required due to the property’s proximity to the ocean.
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-5" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-alt focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-5"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-5"
+                >
+                    <span class="text-lg roboto-condensed-regular">Documents required by the Notary for processing the deed title</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-5"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-5"
+            >
+                <div
+                    class="p-5 border border-b-0 border-alt dark:border-gray-700"
+                >
+                    <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
+                        Passport <br>
+                        Legal Stay Document/Temporal or Permanent residency<br>
+                        Current proof of address<br>
+                        CURP<br>
+                        RFC or TAX ID<br>
+                        Birth certificate<br>
+                        Marriage certificate<br>
+                        Beneficiary’s passport<br>
+                        Promise of sale agreement (if any)<br>
+                        Bank statement or bank transfers of payment<br>
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-6" class="p-0">
+                <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-alt focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-collapse-body-6"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-6"
+                >
+                    <span class="text-lg roboto-condensed-regular">What does the seller require for capital gains exemption?</span>
+                    <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5 5 1 1 5"></path>
+                    </svg>
+                </button>
+            </h2>
+            <div
+                id="accordion-collapse-body-6"
+                class="hidden"
+                aria-labelledby="accordion-collapse-heading-6"
+            >
+                <div
+                    class="p-5 border  border-alt dark:border-gray-700"
+                >
+                    <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
+                        Mexican residency with a Mexican tax ID shown on Telmex, CFE bills, or bank statements. <br>
+                        Land size must not exceed three times the construction size in square meters. Exemption can only be claimed once every three years. <br>
+                        Tax ID address must different from the property being sold. <br>
+                        Some Notarios may require a work permit and proof of tax payments in Mexico for exemption application. Each Notario may have their own criteria for qualification. <br>
+
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</MainLayout>

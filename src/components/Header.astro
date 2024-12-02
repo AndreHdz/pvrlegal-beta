@@ -1,0 +1,174 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header>
+    <div class="bg-alt5">
+        <div class="container mx-auto py-1 flex justify-between">
+            <div class="flex gap-3">
+                <a
+                    href="https://www.facebook.com/pvrlegalsolutions"
+                    target="_blank"
+                >
+                    <img
+                        src="/fb.png"
+                        alt="Facebook Icon"
+                        width="20"
+                        height="20"
+                    />
+                </a>
+                <a href="https://www.instagram.com/pvrlegal/" target="_blank">
+                    <img
+                        src="/instagram.png"
+                        alt="Instagram Icon"
+                        width="20"
+                        height="20"
+                    />
+                </a>
+                <a href="http://www.youtube.com/@PVRLegal" target="_blank">
+                    <img
+                        src="/youtube.png"
+                        alt="Youtube Icon"
+                        width="20"
+                        height="20"
+                    />
+                </a>
+                <a
+                    href="https://www.linkedin.com/company/pvrlegal"
+                    target="_blank"
+                >
+                    <img
+                        src="/linkedin.png"
+                        alt="Linkedin Icon"
+                        width="20"
+                        height="20"
+                    />
+                </a>
+            </div>
+            <div class="flex gap-4">
+                <div class="flex items-center gap-2">
+                    <img
+                        src="/phone.png"
+                        alt="Phone icon"
+                        width="20"
+                        height="20"
+                    />
+                    <a
+                        href="tel:+523223654720"
+                        target="_blank"
+                        class="text-white text-sm">+52 322 365 4720</a
+                    >
+                </div>
+                <div class="flex items-center gap-2">
+                    <img
+                        src="/whatsapp.png"
+                        alt=" icon"
+                        width="20"
+                        height="20"
+                    />
+                    <a
+                        href="https://wa.me/+523223747593"
+                        target="_blank"
+                        class="text-white text-sm">+52 322 374 7593</a
+                    >
+                </div>
+                <div class="flex items-center gap-2">
+                    <img
+                        src="/email.png"
+                        alt="Phone icon"
+                        width="20"
+                        height="20"
+                    />
+                    <a
+                        href="mailto:lia@pvrlegal.com"
+                        target="_blank"
+                        class="text-white text-sm">lia@pvrlegal.com</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#1a4979] ">
+        <nav class="container mx-auto flex justify-between items-center py-2">
+            <a href="/"><img src="/pvr-legal-logo.png" alt="" /></a>
+            <div class="flex gap-6">
+                <HeaderLink href="/">Home</HeaderLink>
+                <HeaderLink href="/about">About Us</HeaderLink>
+                <a
+                    id="dropdownHoverButton"
+                    data-dropdown-toggle="dropdownHover"
+                    data-dropdown-trigger="hover"
+					data-dropdown-delay="100"
+                    class="text-white text-center inline-flex items-center cursor-pointer "
+					href="/services"
+                    type="button"
+                    >Our Services <svg
+                        class="w-2.5 h-2.5 ms-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"></path>
+                    </svg>
+                </a>
+
+                <!-- Dropdown menu -->
+                <div
+                    id="dropdownHover"
+                    class="z-20 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                    <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-200 "
+                        aria-labelledby="dropdownHoverButton"
+                    >
+                        <li class="list-none text-sm">
+                            <a
+                                href="/services/legal-services"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Legal Services</a
+                            >
+                        </li>
+                        <li class="list-none text-sm">
+                            <a
+                                href="/services/corporate-law-services"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Corporate Law Services</a
+                            >
+                        </li>
+                        <li class="list-none text-sm">
+                            <a
+                                href="/services/administrative-services"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Administrative Services</a
+                            >
+                        </li>
+                        <li class="list-none text-sm">
+                            <a
+                                href="/services/immigration-services"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Immigration Services</a
+                            >
+                        </li>
+						<li class="list-none text-sm">
+                            <a
+                                href="/services/tax-and-financial-services"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Tax and Financial Services</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <HeaderLink href="/faqs">FAQs</HeaderLink>
+                <HeaderLink href="#contact-us">Contact Us</HeaderLink>
+                <HeaderLink href="/es">ES</HeaderLink>
+            </div>
+        </nav>
+    </div>
+</header>

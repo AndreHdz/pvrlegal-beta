@@ -1,0 +1,18 @@
+---
+import Button from "./Button.astro";
+
+---
+<div class="relative h-[600px]">
+    <div class="w-10/12 bg-alt rounded-br-[70px] h-[600px] absolute top-0 -z-10"></div>
+    <div class="container mx-auto flex gap-6">
+        <div class="w-1/2 flex flex-col items-center ">
+            <img src="/welcome-to-pvrlegal.png" alt="Welcome to PVR LEGAL" width="240" class="mt-16 mb-4">
+            <h1 class="text-alt8 mb-12 text-center">We are your  trusted experts for comprehensive Legal Solutions Throughout Mexico</h1>
+            <Button href="/services" title="Our Services" />
+        </div>
+        <div class="w-1/2 h-[600px] relative">
+            <img src="/agave.png" alt="Agave" class="absolute bottom-1">
+            <img src="/mariachi.png" alt="Mariachi" class="absolute z-10 -right-10 bottom-0">
+        </div>
+    </div>
+</div>

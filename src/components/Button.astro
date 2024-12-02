@@ -1,0 +1,7 @@
+---
+
+ const {href, title, alt} = Astro.props;
+---
+<a class={`uppercase font-bold inline-block p-3 w-fit ${alt ? 'bg-alt5 text-white' : 'bg-alt8 text-white'}`} href={href}>
+    {title}
+</a>

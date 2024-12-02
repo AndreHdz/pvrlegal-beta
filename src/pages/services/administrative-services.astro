@@ -1,0 +1,22 @@
+---
+
+import pinata from "../../assets/pinata.png";
+import ServicesLayout from "../../layouts/ServicesLayout.astro";
+
+const { title, description } = Astro.props;
+---
+
+<ServicesLayout
+    title="Administrative Services: Streamlining Your Processes"
+    description="Efficient support for bureaucratic procedures, permits, and documentation. Simplifying administrative tasks for individuals and businesses across Mexico."
+    img={pinata}
+    alt="Pinata"
+>
+    <img src="/camion.png" alt="Camion" class="mx-auto mb-12">
+    <p>PVR Legal is renowned not just for our legal expertise but also for our comprehensive range of administrative services designed to meet the specific needs of individuals and businesses in Puerto Vallarta and its surrounding areas. We understand the challenges that come with navigating administrative processes in Mexico, and our dedicated team is here to provide the support and guidance you need to handle essential paperwork, certifications, and regulatory compliance with confidence.</p>
+    <ul>
+        <li>Driver's License</li>
+        <li>Obtaining apostilles for Mexican documents</li>
+        <li>Obtaining RFC (Mexican TAX ID)</li>
+    </ul>
+</ServicesLayout>

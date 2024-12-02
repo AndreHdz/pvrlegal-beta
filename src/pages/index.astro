@@ -1,0 +1,78 @@
+---
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+import Services from "../components/Services.astro"
+import Reviews from "../components/Reviews.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+		<Hero />
+		<div
+			class="relative container mx-auto flex flex-col lg:flex-row gap-12 pt-24 pb-40"
+		>
+			<div class="lg:w-1/2 ">
+				<span class="text-alt3 rubik-mono-one-regular mb-1">Expertise Meets Trust</span>
+				<h2>Your Legal Compass in Mexico</h2>
+				<p>
+					Welcome to PVR LEGAL – where legal proficiency blends
+					with a deep understanding of Mexican Notarial Law. At
+					the heart of our law firm is a team led by a certified
+					expert in Notarial Law, committed to offering a spectrum
+					of legal services with unparalleled dedication.
+				</p>
+				<p class="pb-6">
+					We take pride in providing high-quality legal
+					representation and guidance to our clients. Our team
+					consists.
+				</p>
+				<Button href="#contact-us" title="Contact Us"  />
+			</div>
+			<div class="lg:w-1/2 pb-20 lg:pb-0">
+				<img
+					src="/puerto-vallarta.jpg"
+					alt="Puerto Vallarta Letras"
+				/>
+			</div>
+			<div class="absolute -bottom-10 xl:left-32">
+				<img src="/iguana.png" alt="Iguana" class=" h:40 md:h-58 xl:h-64" />
+			</div>
+		</div>
+		<div class="bg-[#67c9d2] py-16">
+			<div class="container mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
+				<div class="lg:w-7/12">
+					<img
+						src="/mapa-puerto-vallarta.png"
+						alt="Mapa PVR Legal"
+						class="w-full"
+					/>
+				</div>
+				<div class="lg:w-5/12 ">
+					<h2 class="text-white">
+						Relocating your home is not always an easy task.
+					</h2>
+					<p class="text-white">
+						Many years ago, I went through a similar relocating
+						process and I experienced first hand how lost one
+						can feel when moving into a new country with a
+						different culture, food, costumes, language and more
+						importantly, a different legal system.
+					</p>
+					<p class="text-white">
+						And if you add to the mix all the stories you hear
+						on the street, google, chats, and by “experts” who
+						seem to know the right answer to everything, it
+						becomes a challenge to find the right answer or find
+						the correct route.
+					</p>
+					<p class="text-white">
+						That’s how PVR Legal came to be. A legal firm where
+						we combine the legal knowledge with a personalized
+						service catered to our client’s needs.
+					</p>
+				</div>
+			</div>
+		</div>
+		<Services alt />
+		<Reviews />
+</MainLayout>

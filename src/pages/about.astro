@@ -1,0 +1,68 @@
+---
+import InnerPagesHero from "../components/InnerPagesHero.astro";
+import Services from "../components/Services.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import bandera from "../assets/bandera.png";
+---
+
+<MainLayout title="About Us" description="about us">
+    <InnerPagesHero
+        title="PVR Legal: Your Trusted Legal Partner in Mexico"
+        description="Expert legal services in contracts, immigration, and real estate, tailored for nationals and foreigners across Mexico."
+        img={bandera}
+		alt="Bandera de Mexico"
+    />
+
+    <div class="container mx-auto my-20 flex flex-col lg:items-center lg:flex-row gap-12">
+        <div class="lg:w-1/2">
+            <h2>
+                PVR Legal is a law firm led by a certified notary in another
+                state.
+            </h2>
+            <p>
+                We offer to our clients a variety of services and we advise in
+                any type of contracts, immigration law, real estate acquisitions
+                and any type of legal procedures for nationals and foreigners.
+                Locally or any other state.
+            </p>
+            <p>
+                We have alliances with many Lawyers and Notaries around the
+                Jalisco and Nayarit area, as well the East Coast of Mexico. We
+                know the law for each specific area and our clients can trust in
+                our commitment to have their needs met.
+            </p>
+            <p>
+                We strive in our personalized and dedicated service. We make
+                sure our clients understand the different laws and rules
+                specific to their needs. All in a timely manner.
+            </p>
+        </div>
+        <div class="lg:w-1/2">
+            <div>
+                <img src="/iglesia.png" alt="" class="h-[600px] mx-auto object-cover object-bottom" />
+            </div>
+        </div>
+    </div>
+    <div
+        class="container mx-auto flex flex-col-reverse lg:items-center lg:flex-row gap-12 my-20"
+    >
+        <div class="lg:w-1/2">
+            <img src="/centro.jpg" alt="El Centro" />
+        </div>
+        <div class="lg:w-1/2">
+            <h2>
+                Personalized Legal Solutions Backed by Expertise and Local
+                Knowledge
+            </h2>
+            <p>
+                At PVR Legal, we are a team of attorneys dedicated to providing
+                comprehensive legal advice in the fields of real estate law and
+                immigration law. Our mission is to offer effective and
+                personalized legal solutions to our clients, helping them
+                successfully navigate both the real estate market and the
+                complex world of immigration.
+            </p>
+        </div>
+    </div>
+    <Services alt/>
+</MainLayout>
