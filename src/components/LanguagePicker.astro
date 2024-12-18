@@ -1,0 +1,20 @@
+---
+
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+---
+
+<ul class="text-white">
+  {lang == "en" && (
+    <div>
+      <a href="/es">ES</a>
+    </div>
+  )}
+  {lang == "es" && (
+    <div>
+      <a href="/">EN</a>
+    </div>
+  )}
+</ul>

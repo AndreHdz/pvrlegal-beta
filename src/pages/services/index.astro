@@ -2,15 +2,13 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import Services from '../../components/Services.astro';
 import InnerPagesHero from '../../components/InnerPagesHero.astro';
-import faro from '../../assets/faro-2.png'
+import mapa from '../../assets/mapa.png'
 ---
-<MainLayout title="About Us" description="about us" img={faro}>
-
-
-<InnerPagesHero
-title="Our Services: Expert Legal Solutions Tailored for You"
-description="From legal advice to immigration, real estate, and corporate services, we provide personalized solutions to meet your needs across Mexico."
-img={faro}
-alt="Mapa de Mexico"/>
-	<Services/>
+<MainLayout title="About Us" description="about us" img={mapa}>
+	<InnerPagesHero
+	title="Our services: Expert legal solutions tailored for you"
+	description="From legal advice to immigration, real estate, and corporate services, we provide personalized solutions to meet your needs across Mexico."
+	img={mapa}
+	alt="Mapa de Mexico"/>
+	<Services title="Reliable solutions for your legal and financial needs"/>
 </MainLayout>

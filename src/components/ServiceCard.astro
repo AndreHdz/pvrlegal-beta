@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {title, href, img } = Astro.props
+---
+<div class="md:col-span-4 card-grid max-w-[400px] mx-auto ">
+    <div class="img flex items-center justify-end ">
+        <img src={img} alt="Ballena" class="max-h-[160px]">
+    </div>
+    <div class="bg-alt3 rounded-md text  flex flex-col  ">
+        
+    </div>
+    
+    <div class="content p-4 pl-2">
+        <h3 class="text-white pb-5 text-xl md:text-2xl">{title}</h3>
+        <Button href={href} title={t("ui.read-more")}  alt/>
+    </div>
+</div>
+<style>
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(8, 1fr)
+    }
+
+    .img{
+        grid-column: 1/4;
+        grid-row: 1/9;
+        z-index: 1;
+    }
+
+    .text{
+        grid-column: 3/8;
+        grid-row: 2/8;
+
+    }
+
+    .content{
+        grid-column: 4/8;
+        grid-row: 2/8
+    }
+
+    @media  (max-width: 768px) {
+        
+    }
+
+
+</style>

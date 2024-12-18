@@ -1,9 +1,14 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
-<header>
+<header >
     <div class="bg-alt5">
         <div class="container mx-auto py-1 flex justify-between">
             <div class="flex gap-3">
@@ -47,44 +52,52 @@ import { SITE_TITLE } from "../consts";
                 </a>
             </div>
             <div class="flex gap-4">
-                <div class="flex items-center gap-2">
+                <div class="">
+                    <a
+                    href="tel:+523223654720"
+                    target="_blank"
+                    class="text-white text-sm flex items-center gap-2">
                     <img
                         src="/phone.png"
                         alt="Phone icon"
                         width="20"
                         height="20"
                     />
-                    <a
-                        href="tel:+523223654720"
-                        target="_blank"
-                        class="text-white text-sm">+52 322 365 4720</a
-                    >
+                    <span class="hidden md:block">
+                        +52 322 365 4720
+
+                    </span>
+                    </a>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="">
+                    <a
+                    href="https://wa.me/+523223747593"
+                    target="_blank"
+                    class="text-white text-sm flex items-center gap-2">
                     <img
                         src="/whatsapp.png"
                         alt=" icon"
                         width="20"
                         height="20"
                     />
-                    <a
-                        href="https://wa.me/+523223747593"
-                        target="_blank"
-                        class="text-white text-sm">+52 322 374 7593</a
-                    >
+                    <span class="hidden md:block">
+                        +52 322 374 7593        
+                    </span>
+                    </a>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="">
+                    <a
+                    href="mailto:lia@pvrlegal.com"
+                    target="_blank"
+                    class="text-white text-sm flex items-center gap-2">
                     <img
                         src="/email.png"
                         alt="Phone icon"
                         width="20"
                         height="20"
                     />
-                    <a
-                        href="mailto:lia@pvrlegal.com"
-                        target="_blank"
-                        class="text-white text-sm">lia@pvrlegal.com</a
-                    >
+                        <span class="hidden md:block">lia@pvrlegal.com</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -92,18 +105,18 @@ import { SITE_TITLE } from "../consts";
     <div class="bg-[#1a4979] ">
         <nav class="container mx-auto flex justify-between items-center py-2">
             <a href="/"><img src="/pvr-legal-logo.png" alt="" /></a>
-            <div class="flex gap-6">
-                <HeaderLink href="/">Home</HeaderLink>
-                <HeaderLink href="/about">About Us</HeaderLink>
+            <div class="hidden gap-6  md:flex">
+                <HeaderLink href={translatePath('/')}>{t("nav.home")}</HeaderLink>
+                <HeaderLink href={translatePath('/about/')}>{t("nav.about")}</HeaderLink>
                 <a
                     id="dropdownHoverButton"
                     data-dropdown-toggle="dropdownHover"
                     data-dropdown-trigger="hover"
 					data-dropdown-delay="100"
                     class="text-white text-center inline-flex items-center cursor-pointer "
-					href="/services"
+					href={translatePath('/services/')}
                     type="button"
-                    >Our Services <svg
+                    >{t("nav.services")}<svg
                         class="w-2.5 h-2.5 ms-2"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
@@ -130,45 +143,90 @@ import { SITE_TITLE } from "../consts";
                     >
                         <li class="list-none text-sm">
                             <a
-                                href="/services/legal-services"
+                                href={translatePath('/services/legal-services/')}
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Legal Services</a
+                                >{t("nav.legal")}</a
                             >
                         </li>
                         <li class="list-none text-sm">
                             <a
-                                href="/services/corporate-law-services"
+                                href={translatePath('/services/corporate-law-services/')}
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Corporate Law Services</a
+                                >{t("nav.corporate")}</a
                             >
                         </li>
                         <li class="list-none text-sm">
                             <a
-                                href="/services/administrative-services"
+                                href={translatePath('/services/administrative-services/')}
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Administrative Services</a
+                                >{t("nav.administrative")}</a
                             >
                         </li>
                         <li class="list-none text-sm">
                             <a
-                                href="/services/immigration-services"
+                                href={translatePath('/services/immigration-services/')}
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Immigration Services</a
+                                >{t("nav.immigration")}</a
                             >
                         </li>
 						<li class="list-none text-sm">
                             <a
-                                href="/services/tax-and-financial-services"
+                                href={translatePath('/services/tax-and-financial-services/')}
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Tax and Financial Services</a
+                                >{t("nav.tax")}</a
                             >
                         </li>
                     </ul>
                 </div>
-                <HeaderLink href="/faqs">FAQs</HeaderLink>
-                <HeaderLink href="#contact-us">Contact Us</HeaderLink>
-                <HeaderLink href="/es">ES</HeaderLink>
+                <HeaderLink href={translatePath('/faqs/')}>{t("nav.faqs")}</HeaderLink>
+                <HeaderLink href="#contact-us">{t("nav.contact")}</HeaderLink>
+                <LanguagePicker />
+            </div>
+            <div class="md:hidden">
+                <button>
+                    <div id="btn-menu" class="z-30">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <div class="mobile-nav transition-all text-2xl fixed h-screen top-0 left-0 right-0 bottom-0 bg-alt3 z-20 flex gap-4 flex-col items-center justify-center translate-x-[-100%]">
+                <HeaderLink href={translatePath('/')}>{t("nav.home")}</HeaderLink>
+                <HeaderLink href={translatePath('/about/')}>{t("nav.about")}</HeaderLink>
+                <HeaderLink href={translatePath('/services')}>{t("nav.services")}</HeaderLink>
+                <HeaderLink href={translatePath('/services/legal-services')}>{t("nav.legal")}</HeaderLink>
+                <HeaderLink href={translatePath('/services/corporate-law-services')}>{t("nav.corporate")}</HeaderLink>
+                <HeaderLink href={translatePath('/services/administrative-services')}>{t("nav.administrative")}</HeaderLink>
+                <HeaderLink href={translatePath('/services/immigration-services')}>{t("nav.immigration")}</HeaderLink>
+                <HeaderLink href={translatePath('/services/tax-and-financial-services/')}>{t("nav.tax")}</HeaderLink>
+                <HeaderLink href={translatePath('/faqs/')}>{t("nav.faqs")}</HeaderLink>
+                <HeaderLink href="#contact-us">{t("nav.contact")}</HeaderLink>
+                <LanguagePicker />
             </div>
         </nav>
     </div>
 </header>
+
+<script  is:inline>
+    document.addEventListener('astro:page-load', () => {
+        
+        const btnMenu = document.querySelector("#btn-menu")
+        const menu = document.querySelector(".mobile-nav");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener("click", () => {
+            btnMenu.classList.toggle("open");
+            menu.classList.toggle("translate-x-[-100%]");
+            });
+        });
+
+        btnMenu?.addEventListener("click", e => {
+            e.preventDefault()
+            btnMenu.classList.toggle("open")
+            menu.classList.toggle("translate-x-[-100%]");
+        })
+    });
+    
+</script>

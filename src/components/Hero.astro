@@ -1,18 +1,26 @@
 ---
 import Button from "./Button.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 ---
-<div class="relative h-[600px]">
-    <div class="w-10/12 bg-alt rounded-br-[70px] h-[600px] absolute top-0 -z-10"></div>
-    <div class="container mx-auto flex gap-6">
-        <div class="w-1/2 flex flex-col items-center ">
-            <img src="/welcome-to-pvrlegal.png" alt="Welcome to PVR LEGAL" width="240" class="mt-16 mb-4">
-            <h1 class="text-alt8 mb-12 text-center">We are your  trusted experts for comprehensive Legal Solutions Throughout Mexico</h1>
-            <Button href="/services" title="Our Services" />
+<div class="bg-alt">
+    <div class="container mx-auto flex gap-6 pb-[20px] md:pb-[80px]">
+        <div class="md:w-1/2 flex flex-col items-center ">
+            <img src="/welcome-to-pvrlegal.png" alt="Welcome to PVR LEGAL" width="240" class="mt-10 md:mt-16 mb-4 w-[140px] md:w-[240px]">
+            <h1 class="text-alt3 mb-6 md:mb-12 text-center text-3xl md:text-[44px]">{t('hero.title')}</h1>
+            <Button href={translatePath('/services/')} title={t('hero.button')} />
+            <div class="md:hidden relative h-[180px] w-full">
+                <img src="/agave.png" alt="Agave" class="absolute bottom-1 max-w-[180px] right-0">
+                <img src="/mariachi.png" alt="Mariachi" class="absolute z-10  bottom-0 max-w-[180px] right-0" >
+            </div>
         </div>
-        <div class="w-1/2 h-[600px] relative">
-            <img src="/agave.png" alt="Agave" class="absolute bottom-1">
-            <img src="/mariachi.png" alt="Mariachi" class="absolute z-10 -right-10 bottom-0">
+        <div class="hidden md:block md:w-1/2 relative">
+            <img src="/agave.png" alt="Agave" class="absolute bottom-1 max-w-[380px]">
+            <img src="/mariachi.png" alt="Mariachi" class="absolute z-10 -right-10 bottom-0 max-w-[380px]" >
         </div>
     </div>
 </div>

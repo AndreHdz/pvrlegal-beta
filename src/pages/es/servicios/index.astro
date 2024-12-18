@@ -1,0 +1,14 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import Services from '../../../components/Services.astro';
+import InnerPagesHero from '../../../components/InnerPagesHero.astro';
+import mapa from '../../../assets/mapa.png'
+---
+<MainLayout title="Servicios" description="about us" img={mapa}>
+	<InnerPagesHero
+	title="Nuestros servicios: Soluciones legales expertas y personalizadas para usted"
+	description="Desde asesoría legal hasta servicios migratorios, inmobiliarios y corporativos, brindamos soluciones personalizadas para satisfacer sus necesidades en todo México".
+	img={mapa}
+	alt="Mapa de México"/>
+	<Services title="Soluciones confiables para sus necesidades legales y financieras"/>
+</MainLayout>

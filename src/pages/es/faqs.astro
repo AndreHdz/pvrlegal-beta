@@ -1,16 +1,16 @@
 ---
-import InnerPagesHero from "../components/InnerPagesHero.astro";
-import MainLayout from "../layouts/MainLayout.astro";
-import crucero from "../assets/crucero.png"
+import InnerPagesHero from "../../components/InnerPagesHero.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import crucero from "../../assets/crucero.png"
 ---
 
 <MainLayout title="About Us" description="about us">
     <InnerPagesHero
-    title="Frequently asked questions (FAQs)"
-    description="Find clear answers to common questions about our legal, administrative, immigration, and financial services. Your concerns, resolved with ease."
-    img={crucero}
-    alt="Crucero"
-/>
+        title="Preguntas frecuentes (FAQ)"
+        description="Encuentre respuestas claras a preguntas comunes sobre nuestros servicios legales, administrativos, migratorios y financieros. Sus inquietudes, resueltas con facilidad."
+        img={crucero}
+        alt="Crucero"
+    />
     <div class="container mx-auto my-20 flex flex-col lg:flex-row gap-12">
         <div class="lg:w-1/2">
             <img src="/faro.png" alt="Faro" width="w-full">
@@ -24,7 +24,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="true"
                     aria-controls="accordion-collapse-body-1"
                 >
-                    <span class="text-lg roboto-condensed-regular">What are the benefits of Temporal or Permanent residency?</span>
+                    <span class="text-lg roboto-condensed-regular">¿Cuáles son los beneficios de la residencia temporal o permanente?</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -51,7 +51,7 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border border-b-0 border-alt  "
                 >
                     <p class="mb-2 text-gray-500 text-sm ">
-                        Acquiring a Mexican state driver’s license, enabling residents to purchase and register a car in Mexico. No limitations on the number of days allowed in Mexico, and no restrictions on time spent out of the country. Tax savings when selling property in Mexico. Ability to obtain a permit to work as a self-employed individual.
+                        Adquisición de una licencia de conducir del estado mexicano, que permite a los residentes comprar y registrar un automóvil en México. No hay límites en el número de días permitidos en México ni restricciones en el tiempo que se pasa fuera del país. Ahorros fiscales al vender propiedades en México. Posibilidad de obtener un permiso para trabajar como autónomo.
                     </p>
                 </div>
             </div>
@@ -63,7 +63,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-2"
                 >
-                    <span class="text-lg roboto-condensed-regular text-left">Requirements for dual citizenship/Mexican citizenship for descendants of Mexicans by birth</span>
+                    <span class="text-lg roboto-condensed-regular text-left">Requisitos para la doble nacionalidad/ciudadanía mexicana para descendientes de mexicanos por nacimiento</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -90,7 +90,7 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border border-b-0 border-alt dark:border-gray-700"
                 >
                     <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
-                        Original birth certificate of the applicant, apostilled (not older than 1 year). Translation of the birth certificate and apostille by a registered authorized translator. Original birth certificates of both parents (not older than 1 year), including complete information on grandparents from both maternal and paternal sides. CURP (Unique Population Registry Code) of parent. Proof of address with a zip code in Vallarta. Mexican passports or Voter ID cards of both parents. Payment for registration and birth certificate.
+                        Acta de nacimiento original del solicitante, apostillada (no mayor a 1 año). Traducción del acta de nacimiento y apostillada por traductor autorizado registrado. Actas de nacimiento originales de ambos padres (no mayor a 1 año), incluyendo información completa de los abuelos tanto por el lado materno como paterno. CURP (Clave Única de Registro de Población) del padre. Comprobante de domicilio con código postal en Vallarta. Pasaportes mexicanos o credencial de elector de ambos padres. Pago de inscripción y acta de nacimiento.
                     </p>
                 </div>
             </div>
@@ -102,7 +102,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-3"
                 >
-                    <span class="text-lg roboto-condensed-regular">Is it safe to buy property in Pre-construction?</span>
+                    <span class="text-lg roboto-condensed-regular">¿Es seguro comprar una propiedad en pre-construcción?</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -129,7 +129,7 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border border-b-0 border-alt dark:border-gray-700"
                 >
                     <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
-                        Pre-construction purchases of condos or houses often pose high risks. Many buyers have lost large deposits due to projects not being completed on time or at all. Developers may request mortgages on the property, delaying the transfer of ownership. Without a title, selling the property or obtaining building permits becomes challenging.
+                        Las compras de condominios o casas antes de la construcción suelen presentar altos riesgos. Muchos compradores han perdido grandes depósitos debido a que los proyectos no se completaron a tiempo o no se completaron en absoluto. Los desarrolladores pueden solicitar hipotecas sobre la propiedad, lo que retrasa la transferencia de propiedad. Sin un título, vender la propiedad u obtener permisos de construcción se convierte en un desafío.
                     </p>
                 </div>
             </div>
@@ -141,7 +141,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-4"
                 >
-                    <span class="text-lg roboto-condensed-regular">Reasons for needing a Trust when buying in a restricted area</span>
+                    <span class="text-lg roboto-condensed-regular">Razones por las que se necesita un fideicomiso al comprar en una zona restringida</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -168,7 +168,7 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border border-b-0 border-alt dark:border-gray-700"
                 >
                     <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
-                        Properties in the Bahia zone are in a restricted zone and cannot be owned outright by non-citizens. A Trust with a bank as the title holder is required due to the property’s proximity to the ocean.
+                        Las propiedades en la zona de Bahía se encuentran en una zona restringida y no pueden ser propiedad absoluta de personas que no sean ciudadanos. Se requiere un fideicomiso con un banco como titular debido a la proximidad de la propiedad al océano.
                     </p>
                 </div>
             </div>
@@ -180,7 +180,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-5"
                 >
-                    <span class="text-lg roboto-condensed-regular">Documents required by the Notary for processing the deed title</span>
+                    <span class="text-lg roboto-condensed-regular">Documentos que requiere el Notario para tramitar el título de propiedad</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -207,16 +207,16 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border border-b-0 border-alt dark:border-gray-700"
                 >
                     <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
-                        Passport <br>
-                        Legal Stay Document/Temporal or Permanent residency<br>
-                        Current proof of address<br>
+                        Pasaporte<br>
+                        Documento de Legal Estancia/Residencia Temporal o Permanente<br>
+                        Comprobante de domicilio vigente<br>
                         CURP<br>
-                        RFC or TAX ID<br>
-                        Birth certificate<br>
-                        Marriage certificate<br>
-                        Beneficiary’s passport<br>
-                        Promise of sale agreement (if any)<br>
-                        Bank statement or bank transfers of payment<br>
+                        RFC o RFC<br>
+                        Acta de nacimiento<br>
+                        Acta de matrimonio<br>
+                        Pasaporte del beneficiario<br>
+                        Contrato de promesa de compraventa (si lo hubiere)<br>
+                        Extracto bancario o transferencias de pago<br>
                     </p>
                 </div>
             </div>
@@ -228,7 +228,7 @@ import crucero from "../assets/crucero.png"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-6"
                 >
-                    <span class="text-lg roboto-condensed-regular">What does the seller require for capital gains exemption?</span>
+                    <span class="text-lg roboto-condensed-regular">¿Qué requiere el vendedor para la exención de ganancias de capital?</span>
                     <svg
                         data-accordion-icon
                         class="w-3 h-3 rotate-180 shrink-0"
@@ -255,12 +255,10 @@ import crucero from "../assets/crucero.png"
                     class="p-5 border  border-alt dark:border-gray-700"
                 >
                     <p class="mb-2 text-gray-500 dark:text-gray-400 text-sm">
-                        Mexican residency with a Mexican tax ID shown on Telmex, CFE bills, or bank statements. <br>
-                        Land size must not exceed three times the construction size in square meters. Exemption can only be claimed once every three years. <br>
-                        Tax ID address must different from the property being sold. <br>
-                        Some Notarios may require a work permit and proof of tax payments in Mexico for exemption application. Each Notario may have their own criteria for qualification. <br>
-
-
+                        Residencia mexicana con un número de identificación fiscal mexicano que figure en las facturas de Telmex, CFE o estados de cuenta bancarios. <br>
+                        El tamaño del terreno no debe exceder tres veces el tamaño de la construcción en metros cuadrados. La exención solo se puede solicitar una vez cada tres años. <br>
+                        La dirección del número de identificación fiscal debe ser diferente a la de la propiedad que se vende. <br>
+                        Algunos notarios pueden requerir un permiso de trabajo y comprobante de pago de impuestos en México para la solicitud de exención. Cada notario puede tener sus propios criterios de calificación. <br>
                     </p>
                 </div>
             </div>

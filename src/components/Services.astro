@@ -1,47 +1,31 @@
 ---
-import Button from "./Button.astro";
-const {alt} = Astro.props
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import ServiceCard from "./ServiceCard.astro";
+const {alt, title} = Astro.props
+
+import ballena from "../assets/ballena.png"
+import corona from "../assets/corona.png"
+import caballito from "../assets/caballito.png"
+import arcos from "../assets/arcos.png"
+import kiosko from "../assets/kiosko.png"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 <div class={alt ? "pt-20 pb-24 bg-alt5" : "pt-10 pb-24"}> 
     <div class="container mx-auto ">
-        <h2 class={`lg:w-1/2 mb-10 ${alt ? "text-white" : ""} `}>Your Trusted Partner for Legal and Financial Services</h2>
-        <div class="grid xl:grid-cols-12 gap-12">
-            <div class="col-span-4 relative h-[200px]">
-                <img src="/ballena.png" alt="Ballena" class="absolute">
-                <div class="bg-alt6 w-[70%] float-right pl-20 pr-2 h-[160px] mt-8 rounded-[15px] flex flex-col gap-4 justify-center ">
-                    <h3 class="text-white">Legal Services </h3>
-                    <Button href="/services/legal-services" title="Read More"  alt/>
-                </div>
-            </div>
-            <div class="col-span-4 relative h-[200px]">
-                <img src="/corona.png" alt="Corona Iglesia PV" class="absolute bottom-0 h-[220px] left-10">
-                <div class="bg-alt6 w-[70%] float-right pl-20 pr-2 h-[160px] mt-8 rounded-[15px] flex flex-col gap-4 justify-center">
-                    <h3 class="text-white">Corporate Law Services</h3>
-                    <Button href="/services/corporate-law-services" title="Read More" alt />
-                </div>
-            </div>
-            <div class="col-span-4 relative h-[200px]">
-                <img src="/caballito.png" alt="Caballito de Mar" class="absolute bottom-0 h-[220px] left-20">
-                <div class="bg-alt6 w-[70%] float-right pl-20 pr-2 h-[160px] mt-8 rounded-[15px] flex flex-col gap-4 justify-center">
-                    <h3 class="text-white">Administrative Services</h3>
-                    <Button href="/services/administrative-services" title="Read More" alt/>
-                </div>
-            </div>
-            <div class="col-span-2"></div>
-            <div class="col-span-4 relative h-[200px]">
-                <img src="/arcos.png" alt="Arcos" class="absolute bottom-0 h-[160px] left-4">
-                <div class="bg-alt6 w-[70%] float-right pl-20 pr-2 h-[160px] mt-8 rounded-[15px] flex flex-col gap-4 justify-center">
-                    <h3 class="text-white">Immigration Services</h3>
-                    <Button href="/services/immigration-services" title="Read More" alt/>
-                </div>
-            </div>
-            <div class="col-span-4 relative h-[200px]">
-                <img src="/kiosko.png" alt="Kiosko" class="absolute bottom-0 h-[160px] left-0">
-                <div class="bg-alt6 w-[70%] float-right pl-20 pr-2 h-[160px] mt-8 rounded-[15px] flex flex-col gap-4 justify-center">
-                    <h3 class="text-white">Tax and Finnancial</h3>
-                    <Button href="/services/tax-and-financial-services" title="Read More" alt/>
-                </div>
-            </div>
+        <div class="lg:w-1/2 mb-10 mx-auto">
+            <h2 class={` text-center ${alt ? "text-white" : ""} `}>{title}</h2>
+        </div>
+        <div class="grid md:grid-cols-8 xl:grid-cols-12 gap-12">
+            <ServiceCard title={t("nav.legal")} href={translatePath('/services/legal-services/')} img={ballena.src}/>
+            <ServiceCard title={t("nav.corporate")} href={translatePath('/services/corporate-law-services/')} img={corona.src}/>
+            <ServiceCard title={t("nav.administrative")} href={translatePath('/services/administrative-services/')} img={caballito.src}/>
+            <div class="hidden xl:block xl:col-span-2"></div>
+            <ServiceCard title={t("nav.immigration")} href={translatePath('/services/immigration-services/')} img={arcos.src}/>
+            <ServiceCard title={t("nav.tax")} href={translatePath('/services/tax-and-financial-services/')} img={kiosko.src}/>
+
         </div>
     </div>
 </div>

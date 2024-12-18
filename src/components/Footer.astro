@@ -1,5 +1,9 @@
 ---
 const today = new Date();
+import { getLangFromUrl, useTranslations,  } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="bg-[#1a4979] py-12" id="contact-us">
@@ -8,12 +12,11 @@ const today = new Date();
             <div class="lg:w-5/12">
 				<img src="/logo-footer.png" alt="PVR Legal" class="mb-8 w-[100px] mx-auto sm:mx-0">
                 <h2 class="text-white text-4xl">
-                    Get in touch with us
+                    {t('footer.title')}
                 </h2>
                 <p class="text-white">
-                    Law is a system of rules and guidelines established by a
-                    society or governing authority to regulate behavior,
-                    maintain order, and provide justice.
+                    {t('footer.p')}
+
                 </p>
             </div>
             <div class="lg:w-7/12">

@@ -1,0 +1,74 @@
+---
+import Hero from "../../components/Hero.astro";
+import Button from "../../components/Button.astro";
+import Services from "../../components/Services.astro"
+import Reviews from "../../components/Reviews.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+		<Hero />
+		<div
+			class="relative container mx-auto flex flex-col lg:flex-row gap-12 pt-24 pb-40"
+		>
+			<div class="lg:w-1/2 ">
+				<span class="text-alt3 roboto-condensed-regular font-black uppercase mb-1">La Firma de Abogados Premier de Puerto Vallarta</span>
+				<h2>Servicios Legales para Puerto Vallarta y Bahía de Banderas</h2>
+				<p>
+					
+				</p>
+				<p class="pb-6">
+					En PVR Legal puedes confiar en nosotros para guiarte en tu proceso legal, ya sea que estés por comprar tu
+					primera casa o departamento, busques establecerte en México o te interese invertir en el mercado
+					inmobiliario. 
+				</p>
+				<Button href="#contact-us" title="Contactanos"  />
+			</div>
+			<div class="lg:w-1/2 pb-20 lg:pb-0">
+				<img
+					src="/puerto-vallarta.jpg"
+					alt="Puerto Vallarta Letras"
+				/>
+			</div>
+			<div class="absolute -bottom-10 xl:left-32">
+				<img src="/iguana.png" alt="Iguana" class=" h:40 md:h-58 xl:h-64" />
+			</div>
+		</div>
+		<div class="bg-alt py-16">
+			<div class="container mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
+				<div class="lg:w-7/12">
+					<img
+						src="/mapa-jalisco.png"
+						alt="Mapa PVR Legal"
+						class="w-full"
+					/>
+				</div>
+				<div class="lg:w-5/12 ">
+					<h2 >
+						Mudarse de casa no siempre es una tarea fácil.
+					</h2>
+					<p >
+					Hace años, el fundador de PVR Legal atravesó un proceso de mudanza similar y experimentó en primera persona la sensación de desorientación que conlleva mudarse a un nuevo país. Adaptarse a una cultura, una gastronomía, unas tradiciones, un idioma y, lo más importante, un sistema legal desconocido puede ser abrumador.
+					</p>
+					<p >
+					A la complejidad se suman las innumerables historias que se escuchan en la calle, a través de búsquedas en línea, en grupos de chat o de los llamados "expertos" que parecen tener respuestas para todo. Estos factores a menudo dificultan la identificación del camino correcto o de soluciones confiables.
+					
+					</p>
+					<p >
+					Esta experiencia inspiró la creación de PVR Legal, un bufete de abogados que combina el conocimiento legal experto con un servicio personalizado, diseñado para satisfacer las necesidades únicas de cada cliente.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container mx-auto my-20">
+			<h2>¿Por qué elegir a PVR LEGAL?</h2>
+			<p><strong>Experiencia:</strong> Nuestro equipo cuenta con años de experiencia ayudando en esta pintoresca región. Entendemos el lugar, la cultura y los desafíos únicos que conllevan los asuntos legales en Puerto Vallarta y Bahía de Banderas.</p>
+			<p><strong>Confiabilidad:</strong> Priorizamos la transparencia y la integridad en todo el proceso legal.</p>
+			<p><strong>Talento:</strong> Nuestros abogados no solo son expertos; son apasionados por su profesión. Trabajaremos incansablemente para ayudarlo en su nueva vida, prestando atención incluso a los detalles más pequeños, un equipo talentoso de abogados ansiosos por ayudarlo a mudarse a su nuevo hogar paradisíaco.</p>
+			<h3>Su sueño lo espera</h3>
+			<p>Su sueño de mudarse a Vallarta o la Bahía de Banderas está a un paso de distancia. Deje que PVR LEGAL sea su socio para crear una nueva vida. Contáctenos para conocer a nuestro talentoso equipo de abogados ansiosos por ayudarlo a mudarse a su nuevo paraíso.</p>
+		</div>
+		<Services title="Su compañero de confianza para servicios legales y financieros" alt />
+
+		<Reviews />
+</MainLayout>

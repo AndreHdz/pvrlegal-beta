@@ -1,9 +1,11 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import InnerPagesHero from "../components/InnerPagesHero.astro";
 import MainLayout from "./MainLayout.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const { title, description, img, alt } = Astro.props;
 ---
@@ -16,47 +18,42 @@ const { title, description, img, alt } = Astro.props;
         </div>
         <div class="xl:w-1/3">
             <div
-                class="bg-alt8 p-8 rounded-tl-[30px] rounded-[30px] sticky top-10"
+                class="bg-alt3 p-8 rounded-tl-[30px] rounded-[30px] sticky top-10"
             >
-                <h2 class="text-3xl text-white">Explore Our Services</h2>
+                <h2 class="text-3xl text-white">{t("sidebar.title")}</h2>
                 <div class="text-white">
-                    <a href="/services/legal-services">
-                        <h3 class="text-xl">Legal Services</h3>
+                    <a href={translatePath('/services/legal-services/')}>
+                        <h3 class="text-xl capitalize">{t("nav.legal")}</h3>
                         <p class="text-sm text-white">
-                            Tailored legal advice for contracts, real estate,
-                            and more.
+                            {t("sidebar.legal")}
                         </p>
                     </a>
-                    <a href="/services/corporate-law-services">
-                        <h3 class="text-xl">Corporate law Services</h3>
+                    <a href={translatePath('/services/corporate-law-services/')}>
+                        <h3 class="text-xl ">{t("nav.corporate")}</h3>
                         <p class="text-sm text-white">
-                            Tailored legal advice for contracts, real estate,
-                            and more.
+                            {t("sidebar.corporate")}
                         </p>
                     </a>
-                    <a href="/services/administrative-services">
-                        <h3 class="text-xl">Administrative Services</h3>
+                    <a href={translatePath('/services/administrative-services/')}>
+                        <h3 class="text-xl">{t("nav.administrative")}</h3>
                         <p class="text-sm text-white">
-                            Expert support for bureaucratic and procedural
-                            matters.
+                            {t("sidebar.administrative")}
                         </p>
                     </a>
-                    <a href="/services/immigration-services">
-                        <h3 class="text-xl">Immigration Services</h3>
+                    <a href={translatePath('/services/immigration-services/')}>
+                        <h3 class="text-xl ">{t("nav.immigration")}</h3>
                         <p class="text-sm text-white">
-                            Hassle-free guidance through Mexican immigration
-                            processes.
+                            {t("sidebar.immigration")}
                         </p>
                     </a>
-                    <a href="/services/tax-and-financial-services">
-                        <h3 class="text-xl">Tax & Financial Services</h3>
+                    <a href={translatePath('/services/tax-and-financial-services/')}>
+                        <h3 class="text-xl">{t("nav.tax")}</h3>
                         <p class="text-sm text-white">
-                            Reliable solutions for tax compliance and financial
-                            planning.
+                            {t("sidebar.tax")}
                         </p>
                     </a>
                 </div>
-                <div class="pt-6">
+<!--                 <div class="pt-6">
                     <p class="text-white">Have questions? Contact Us</p>
                     <div class="flex flex-col text-white">
                       <a href="tel:+523223654720"
@@ -72,7 +69,7 @@ const { title, description, img, alt } = Astro.props;
                             >lia@pvrlegal.com</a
                         >
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
